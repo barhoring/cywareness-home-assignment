@@ -11,15 +11,6 @@ interface IPhishingGraphProps {
 
 interface Idata {
   labels: string[];
-  //   datasets: [
-  //     {
-  //       label: string;
-  //       data: string[];
-  //       backgroundColor: any[];
-  //       borderColor: any[];
-  //       borderWidth: number;
-  //     }
-  //   ];
   datasets: {
     label: string;
     data: string[];
