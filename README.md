@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+npm i
+npm start
+```
 
-## Available Scripts
+## Home Assignment
 
-In the project directory, you can run:
+The following is your assignment:
+Build a simple dashboard with one graph and a login page. You must use React and TypeScript.
+Build a login page that asks for a username and password and sends the username and password as a JSON body to the http://candidate-test.cywareness.io/login endpoint. The body of the request should look something like this:
+{“username”: “pop”, “password”: “pop123”}
+You can use any username and password, they will all work.
+The response will look as following:
+{“login”: “success”, “auth_token”: <string>}
+Save the auth_token received wherever you like and send it in the server in the next request you will be making.
+Redirect the user after a successful login to a page with the title “Phishing Graph”. The page will have one graph (of whatever type you choose but it will be built for a line chart) that its data will be taken from an API endpoint at http://candidate-test.cywareness.io/data. This endpoint will require authentication so you will need to add an Authorization header that looks as following:
+Authorization: Bearer <token>
+The graph X axis will be the date and the Y access will be the amount of phishing attacks on that day.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Notes:
+Yes I know you did not do an OAuth token yet we are using Bearer, this is okay as we are just testing your way of implementing this method.
+For charts, you can use chartJS if you would like.
+Notice that the data returned from the API will need to be parsed in order to be used in the chart
+Best of luck!
+If at any point you pass an hour and a half of working on this, feel free to stop where you are and send me what you got, don’t spend too much time on it!

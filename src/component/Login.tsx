@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { navigate } from "@reach/router";
 import axios from "axios";
 const endpoint = "http://candidate-test.cywareness.io/login";
@@ -29,7 +29,6 @@ const Login = (props: ILoginProps) => {
     });
     const token = res.data.auth_token;
     props.setAuthToken(token);
-    console.log(token);
     navigate(`/graph/`);
   };
 

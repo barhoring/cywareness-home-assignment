@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Router } from "@reach/router";
 import "./App.css";
-import Login from "./Login";
-import PhishingGraph from "./PhishingGraph";
+import Login from "./component/Login";
+import PhishingGraph from "./component/PhishingGraph";
 
 function App() {
   const [authToken, setAuthToken] = useState("");
