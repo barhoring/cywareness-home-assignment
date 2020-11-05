@@ -4,7 +4,6 @@ import { HorizontalBar } from "react-chartjs-2";
 const endpoint = "http://candidate-test.cywareness.io/data";
 
 interface IPhishingGraphProps {
-  /* The http path that the form will be posted to */
   path: string;
   auth_token: string;
 }
